@@ -1,20 +1,58 @@
-# User Manual
+# User Manual - WebChat
 
-## Register
+## Introduction
 
-1. Open application
-2. Click Register
-3. Fill the form
-4. Submit
+WebChat eshte nje aplikacion komunikimi ne kohe pothuajse reale qe lejon perdoruesit te regjistrohen, te identifikohen dhe te komunikojne me perdorues te tjere.
+
+## Registration
+
+1. Hap aplikacionin.
+2. Kliko butonin Register.
+3. Ploteso emrin, email-in dhe fjalekalimin.
+4. Kliko Register.
+5. Llogaria krijohet me sukses.
 
 ## Login
 
-1. Enter email
-2. Enter password
-3. Click Login
+1. Hap aplikacionin.
+2. Vendos email-in.
+3. Vendos fjalekalimin.
+4. Kliko Login.
+5. Perdoruesi ridrejtohet ne faqen kryesore te chat-it.
 
-## Chat
+## Sending Messages
 
-1. Select user
-2. Type message
-3. Press Send
+1. Zgjidh nje bisede ose nje perdorues.
+2. Shkruaj mesazhin ne kutine e tekstit.
+3. Kliko Send.
+4. Mesazhi shfaqet ne bisede.
+
+## Receiving Messages
+
+1. Hap nje bisede aktive.
+2. Mesazhet e reja shfaqen automatikisht.
+3. Perdoruesi mund te lexoje mesazhet ne kohe reale.
+
+## Viewing Chat History
+
+1. Hap nje bisede ekzistuese.
+2. Shfaqet historiku i mesazheve.
+3. Perdoruesi mund te lexoje mesazhet e meparshme.
+
+## Logout
+
+1. Kliko butonin Logout.
+2. Sesioni mbyllet.
+3. Perdoruesi ridrejtohet ne faqen Login.
+
+## Troubleshooting
+
+### Nuk mund te identifikohem
+
+* Kontrollo email-in dhe fjalekalimin.
+* Sigurohu qe llogaria ekziston.
+
+### Mesazhet nuk shfaqen
+
+* Rifresko faqen.
+* Kontrollo lidhjen me internetin.
