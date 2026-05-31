@@ -1,0 +1,63 @@
+<?php
+session_start();
+include "../config/db.php";
+
+header("Content-Type: application/json");
+
+if (!isset($_SESSION["user_id"])) {
+    echo json_encode(["status" => "error", "message" => "Nuk je loguar"]);
+    exit;
+}
+
+if (!isset($_POST["chat_id"])) {
+    echo json_encode(["status" => "error", "message" => "Mungon chat_id"]);
+    exit;
+}
+
+$userId = (int) $_SESSION["user_id"];
+$chatId = (int) $_POST["chat_id"];
+$message = trim($_POST["message"] ?? "");
+$fileName = null;
+
+if ($message === "" && empty($_FILES["file"]["name"])) {
+    echo json_encode(["status" => "error", "message" => "Mesazhi bosh"]);
+    exit;
+}
+
+if (!empty($_FILES["file"]["name"])) {
+    if (!is_dir("../uploads")) {
+        mkdir("../uploads", 0777, true);
+    }
+
+    $originalName = basename($_FILES["file"]["name"]);
+    $fileName = time() . "_" . preg_replace("/[^a-zA-Z0-9._-]/", "_", $originalName);
+    move_uploaded_file($_FILES["file"]["tmp_name"], "../uploads/" . $fileName);
+}
+
+$sql = "INSERT INTO messages (chat_id, sender_id, message, file_name) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    echo json_encode([
+        "status" => "error",
+        "message" => "Gabim prepare: " . $conn->error
+    ]);
+    exit;
+}
+
+$stmt->bind_param("iiss", $chatId, $userId, $message, $fileName);
+
+if (!$stmt->execute()) {
+    echo json_encode([
+        "status" => "error",
+        "message" => "Gabim execute: " . $stmt->error
+    ]);
+    exit;
+}
+
+echo json_encode([
+    "status" => "success",
+    "message_id" => $stmt->insert_id
+]);
+exit;
+?>
