@@ -9,8 +9,8 @@ Krijimi i Wireframe per Login dhe Chat
 Krijimi i Nderfaqes se Chat-it
 ### Isela Prifti
 - Projektimi i Skemës së Databazës
-- Krijimi dhe Konfigurimi i Databazës në phpMyAdmin
-  ##Enisa Qerosi
+- Krijimi dhe Konfigurimi i Databazës në phpMyAdmin 
+  ### Enisa Qerosi
   Implementimi i Bisedave ne Grup
   Implementimi i Ajax per Perditesimin e Mesazheve
 ### Fiona Kruja
