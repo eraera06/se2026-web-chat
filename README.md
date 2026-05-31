@@ -4,3 +4,7 @@ Platforme web per komunikim pothuajse ne kohe reale qe lejon regjistrimin e perd
 Branch per implementimin e regjistrimit te perdoruesit.
 
 Branch per implementimin e logout.
+
+ ### Isela Prifti
+- Projektimi i Skemës së Databazës
+- Krijimi dhe Konfigurimi i Databazës në phpMyAdmin
