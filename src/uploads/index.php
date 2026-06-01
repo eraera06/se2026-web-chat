@@ -1354,7 +1354,7 @@ body::before{
       </div>
       <div class="hidden" id="registerBox">
        <h2 class="form-title">
-        Krijo llogari 🚀
+        Krijo llogari 
        </h2>
        <p class="form-text">
         Regjistrohu dhe fillo bisedat menjëherë
